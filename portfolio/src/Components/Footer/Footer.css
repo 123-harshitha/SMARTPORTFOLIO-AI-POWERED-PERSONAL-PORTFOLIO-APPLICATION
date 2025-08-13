@@ -1,0 +1,150 @@
+.footer {
+  background-color: #121212;
+  color: #eee;
+  padding: 40px 20px 20px;
+  font-family: 'Poppins', sans-serif;
+  border-top: 2px solid #b415ff;
+  user-select: none;
+}
+
+.footer-container {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1 1 250px;
+  min-width: 220px;
+}
+
+.footer-section h3 {
+  font-size: 1.6rem;
+  color: #b415ff;
+  margin-bottom: 20px;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links ul li {
+  margin-bottom: 12px;
+}
+
+.footer-links ul li a {
+  color: #ddd;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover,
+.footer-links ul li a:focus {
+  color: #da7c25;
+  outline: none;
+}
+
+.footer-contact p {
+  margin-bottom: 12px;
+  font-weight: 500;
+  color: #ccc;
+}
+
+.footer-contact a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-contact a:hover,
+.footer-contact a:focus {
+  color: #da7c25;
+  outline: none;
+}
+
+.footer-social .social-icons {
+  display: flex;
+  gap: 20px;
+  font-size: 1.8rem;
+}
+
+.footer-social .social-icons a {
+  color: #b415ff;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-social .social-icons a:hover,
+.footer-social .social-icons a:focus {
+  color: #da7c25;
+  transform: scale(1.2);
+  outline: none;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 500;
+  color: #bbb;
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 25px;
+    padding: 0 10px;
+  }
+
+  .footer-section {
+    min-width: auto;
+  }
+}
+
+.back-to-top {
+  cursor: pointer;
+  text-align: center;
+  margin: 15px 0;
+  color: #b415ff;
+  font-weight: 600;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.back-to-top:hover,
+.back-to-top:focus {
+  color: #da7c25;
+  outline: none;
+}
+
+/* Make sure footer is responsive */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Adjust sections for smaller screens */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    max-width: 320px;
+  }
+
+  .social-icons a {
+    margin: 0 10px;
+  }
+}
+
+
+

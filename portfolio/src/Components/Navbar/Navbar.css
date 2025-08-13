@@ -1,0 +1,220 @@
+/* Base resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #eee;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #121212;
+  padding: 15px 30px;
+  font-family: 'Poppins', sans-serif;
+  color: #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid #b415ff;
+}
+
+/* Logo */
+.logo a {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #b415ff;
+  text-decoration: none;
+  user-select: none;
+}
+
+/* Navigation menu */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-menu li {
+  font-weight: 600;
+}
+
+.nav-menu li a {
+  color: #eee;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a:focus {
+  background: linear-gradient(267deg, #DA7C25, #B923E1);
+  color: #fff;
+  outline: none;
+}
+
+/* Contact Me button */
+.nav-connect {
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: linear-gradient(267deg, #DA7C25, #B923E1);
+  cursor: pointer;
+  user-select: none;
+  color: white;
+  transition: background 0.3s ease;
+  border: none;
+  outline: none;
+}
+
+.nav-connect:hover,
+.nav-connect:focus {
+  background: linear-gradient(267deg, #B923E1, #DA7C25);
+  outline: none;
+}
+
+/* Hamburger menu button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 25px;
+  height: 22px;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  height: 3px;
+  background-color: #eee;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    background-color: #121212;
+    flex-direction: column;
+    width: 220px;
+    height: calc(100vh - 60px);
+    padding-top: 30px;
+    gap: 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: -4px 0 15px rgba(180, 21, 255, 0.6);
+    z-index: 999;
+  }
+
+  .nav-menu.open {
+    transform: translateX(0);
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-connect {
+    display: inline-block; /* Show connect button on mobile */
+  }
+}
+
+/* AI Features dropdown */
+.ai-dropdown {
+  position: relative;
+  list-style: none;
+}
+
+.ai-dropdown-btn {
+  background: none;
+  border: none;
+  color: #eee;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.ai-dropdown-btn:hover,
+.ai-dropdown-btn:focus {
+  background: linear-gradient(267deg, #DA7C25, #B923E1);
+  color: #fff;
+  outline: none;
+}
+
+.ai-dropdown-menu {
+  position: absolute;
+  top: 36px;
+  left: 0;
+  background: #121212;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(180, 21, 255, 0.6);
+  min-width: 220px;
+  z-index: 2000;
+  padding: 8px 0;
+}
+
+.ai-dropdown-menu li {
+  list-style: none;
+}
+
+.ai-dropdown-menu button {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  color: #eee;
+  padding: 10px 18px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.ai-dropdown-menu button:hover,
+.ai-dropdown-menu button:focus {
+  background: linear-gradient(267deg, #DA7C25, #B923E1);
+  color: white;
+  outline: none;
+}
+
+/* PortfolioSummary styles */
+.portfolio-summary {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  color: #eee;
+  white-space: pre-wrap; /* preserve line breaks */
+}
