@@ -1,6 +1,7 @@
 // src/components/ChatBot.jsx
 import React, { useState } from "react";
 import "./chatbot.css";
+import server from "../../environment.js"; 
 
 const ChatBot = ({ onClose }) => {
   const [messages, setMessages] = useState([
@@ -18,7 +19,7 @@ const ChatBot = ({ onClose }) => {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/chat", {
+      const res = await fetch(`${server}/api/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: input })

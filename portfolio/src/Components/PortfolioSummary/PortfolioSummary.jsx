@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './PortfolioSummary.css';
+import server from "../../environment.js";
 
 const PortfolioSummary = ({ visible, onClose }) => {
   const [aiSummary, setAiSummary] = useState("");
@@ -12,7 +13,7 @@ const PortfolioSummary = ({ visible, onClose }) => {
     setLoading(true);
     setError("");
     setAiSummary("");
-    fetch("http://localhost:5000/api/ai-summary") // make sure your backend port is correct
+    fetch(`${server}/api/ai-summary`) // make sure your backend port is correct
       .then((res) => res.json())
       .then((data) => {
         if (data.summary) {
